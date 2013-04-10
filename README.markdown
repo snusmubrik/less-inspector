@@ -1,22 +1,20 @@
-[![Build Status](https://secure.travis-ci.org/Layzie/less-watcher.png?branch=target_dir_opt)](http://travis-ci.org/Layzie/less-watcher)
 
-less-watcher is a script that can watch a directory and recompile your .less scripts if they change.
-It's useful for development as you don't need to think about recompiling your Less files.
+less-inspector is a script that can watch a directory and recompile your .less scripts if they change.
+Also less-inspector can compile only one file. It is needed when you have main file with many css imports.
 
 It searches in a recursive manner so sub-directories are handled as well.
 
-To install less-watcher via npm simply do:
+<!-- To install less-inspector via npm simply do:
 
-    $ sudo npm install less-watcher
+    $ sudo npm install less-inspector -->
 
-To use less-watcher simply do:
+To use less-inspector simply do:
 
-    less-watcher -p [prefix] -d [directory]
+    less-inspector -p [prefix] -d [directory]
     
     Options:
-      -d  Specify which directory to scan.                                                                         [default: "."]
-      -p  Which prefix should the compiled files have? Default is style.less will be compiled to .less.style.css.  [default: ".less."]
-      -h  Prints help                                                                                              [boolean]
+      -d [path]  Specify which directory to scan.                                                                         [default: "."]
+      -f [path]  If defined, LESS will watch all files but will compile only the specified one.                     
+      -p [name]  Which prefix should the compiled files have? Default is style.less will be compiled to style.css.  
+      -h  Prints help                                                                                              
 
-For more info read:
-http://amix.github.com/less-watcher/
